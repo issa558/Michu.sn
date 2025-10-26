@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>michu.sn — Issa</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- meta for social -->
+  <meta name="description" content="Issa — fashion & lifestyle creator. Follow @michu.sn" />
+  <meta property="og:title" content="michu.sn — Issa" />
+  <meta property="og:description" content="Issa — fashion & lifestyle creator. Follow @michu.sn" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <h1 class="site-title">michu.sn</h1>
+        <p class="site-sub">Issa — fashion & lifestyle creator</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn primary" href="https://www.instagram.com/michu.sn" target="_blank" rel="noopener">Follow @michu.sn</a>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="card">
+      <h2>About Issa</h2>
+      <p id="bio">Issa — fashion & lifestyle creator. Living the michu.sn vibe.</p>
+    </section>
+
+    <section id="feed" class="card">
+      <div class="card-header">
+        <h2>Instagram</h2>
+        <p class="muted">Latest posts from <strong>@michu.sn</strong></p>
+      </div>
+
+      <div id="gallery" class="grid">
+        <!-- JS will fill this with images. Fallback placeholders included in script -->
+      </div>
+
+      <div class="center mt-20">
+        <button id="load-more" class="btn primary">Load more</button>
+      </div>
+
+      <p class="muted small mt-10">If you want a live feed, follow the instructions in README in the project root to configure Instagram Basic Display API.</p>
+    </section>
+
+    <section id="highlights" class="card">
+      <h2>Highlights</h2>
+      <div class="flex">
+        <div class="highlight">
+          <h3>Vibes</h3>
+          <p>Fashion • Lifestyle • Creativity</p>
+        </div>
+        <div class="highlight">
+          <h3>Bookings</h3>
+          <p>Collabs, shoots & features — contact below.</p>
+        </div>
+        <div class="highlight">
+          <h3>Events</h3>
+          <p>Pop-ups & drops — stay tuned on IG.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p class="muted">Hit up Issa on Instagram or send a message:</p>
+
+      <form id="contact-form" class="contact-form" onsubmit="return onContactSubmit(event)">
+        <input id="name" placeholder="Your name" required />
+        <input id="email" type="email" placeholder="Your email" required />
+        <textarea id="message" placeholder="Message" rows="4" required></textarea>
+        <div class="row">
+          <button class="btn primary" type="submit">Send</button>
+          <a class="btn ghost" href="https://www.instagram.com/michu.sn" target="_blank" rel="noopener">DM on IG</a>
+        </div>
+      </form>
+      <p id="contact-note" class="muted small">This form uses a client-side placeholder — add a server or service for real submissions.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> michu.sn • Built for Issa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
